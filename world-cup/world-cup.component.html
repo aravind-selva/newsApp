@@ -1,0 +1,34 @@
+<pre>{{year}}
+
+{{winner}}
+<button (click)="getWinner('India')">get winner</button>
+
+<span *ngIf="showWinner">{{toggleWinner | uppercase  }}</span>
+<button (click)="toggle('ENgland')">Toggle winner</button>
+<span *ngIf="showWinner">{{toggleWinner | lowercase }}</span>
+<button (click)="toggle('ENgland')">Toggle winner</button>
+
+<span *ngIf="showWinner">{{toggleWinner | worldCup : year: kanna}}</span>
+<button (click)="toggle('england')">worldcup winner</button>
+
+<br/>
+{{no| numericalOperations:no1}}
+<!-- <img [src]="path"> -->
+<br/>
+<br/>
+<table border="2">
+  <thead>
+    <th>TEAMS</th>
+    <th>WINS</th>
+  </thead>
+  <tbody>
+    <!-- <tr *ngFor="let team of teams">
+      <td>{{team}}</td>
+    </tr> -->
+    <tr *ngFor ="let team of teams">
+      <td>{{team.name}}</td>
+      <td>{{team.wins}}</td>
+    </tr>
+  </tbody>
+</table>
+  </pre>
